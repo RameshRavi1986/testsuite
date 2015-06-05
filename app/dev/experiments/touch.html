@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="rm" class="no-services lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="rm" class="no-services lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="rm" class="no-services lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="rm" class="no-js"> <!--<![endif]-->
+<head >
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Room Mate : Panel</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=1024, initial-scale=1,user-scalable=no">
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+<link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+ <link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="panel/css/app.css">
+</head>
+<body>
+
+<div class="content">
+  <div id="test" class="menu-item" onclick="" ontouchstart="test()">Hello</div>
+</div>
+
+<script>
+    var toggle = 0;
+  function test() {
+    var el = document.getElementById("test");
+      toggle = !toggle;
+      var color = toggle ? "red" : "white";
+      el.style.backgroundColor = color;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* header */
+.header {
+    position:absolute;
+    top:0px;
+    left:50px;
+    right:50px;
+    height: 60px;
+
+    background-color: white;
+    color: #ccc;
+
+    /*
+    -webkit-box-shadow: 0px 2px 1px #12122e;
+    box-shadow: 0px 2px 1px #12122e;
+    */
+}
+
+.header .room-name {
+    position:absolute;;
+    left:200px;
+    right:200px;
+    top: 2px;
+    text-align: center;
+    font-size: 40px;
+    color: #02506f;
+}
+
+.header .clock {
+    position: absolute;
+    right: 20px;
+    top:3px;
+    text-align: center;
+}
+
+.header .time {
+    color: #027e9e;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+
+.header .date {
+    position:relative;
+    font-size: 11px;
+    top: -5px;
+    color: #024564;
+}
+
+.header .client-logo {
+    position: absolute;
+    top: 0px;
+    left:20px;
+}
+
+/* footer */
+.footer .menu {
+    display: block;
+    text-align: center;
+}
+
+.footer .menu span  {
+    display:inline-block;
+}
+
+
+
+.footer .menu a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.footer {
+    position: absolute;
+
+    text-align: center;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 99;
+}
+
+.footer .rm-logo {
+    margin:auto;
+    position: absolute;
+
+    left: 5px;
+    bottom: 10px;
+}

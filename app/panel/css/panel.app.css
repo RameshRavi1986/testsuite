@@ -1,0 +1,102 @@
+html, body {
+    min-width:1024px;
+    min-height:560px;
+}
+
+body {
+  background: rgb(0, 43, 73);
+  color: #fff;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  background-color: #616161;
+  border-color: #383838;
+}
+
+.content {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  font-size: 24px;
+  padding: 15px;
+  margin:0;
+}
+
+
+/* Main View */
+.view {
+  position:absolute;
+  left:0;
+  right:0;
+  top:100px;
+  bottom:100px;
+  overflow: hidden;
+
+}
+
+@media screen and (min-height: 700px) {
+  .view {
+    top:110px;
+  }
+}
+
+h1, h2, h3, h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+h3 {
+    color: white;
+}
+
+.view h3 {
+  font-size: 30px;
+}
+
+.view h4 {
+  border-bottom: solid;
+  border-color: grey;
+  border-width: 2px;
+  font-size: 24px;
+  padding: 3px;
+}
+
+.busy .icon  {
+  color: #B00;
+  fill: #B00;
+}
+
+.vacant {
+  /*color: #0B0;*/
+  color: #FFF;
+  fill: #FFF;
+}
+
+a {
+  cursor: pointer;
+}

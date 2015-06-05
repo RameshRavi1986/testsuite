@@ -1,0 +1,57 @@
+<div class="logos-view">
+
+    <div ng-show="view.auth.canEditBookings()">
+        <div flow-init
+             flow-files-submitted="$flow.upload()"
+             flow-file-added="view.checkExtension($file)"
+             flow-complete="view.uploadComplete()">
+            <div class="drop" flow-drop ng-class="dropClass" flow-drag-enter="style={border:'4px solid green'}"
+                 flow-drag-leave="style={}" ng-style="style">
+                <md-button class="md-raised" flow-btn>Upload Image</md-button>
+                <md-button class="md-raised" flow-btn flow-directory ng-show="$flow.supportDirectory">Upload Folder of Images
+                </md-button>
+                <b>OR</b>
+                Drag And Drop your images here
+            </div>
+
+            <!--
+            <div>
+                <div ng-repeat="file in $flow.files" class="gallery-box">
+                    <span class="title">{{file.name}}</span>
+                    <div class="thumbnail" ng-show="$flow.files.length">
+                        <img flow-img="file" />
+                    </div>
+                    <md-progress-linear ng-show="file.isUploading()" value="{{file.progress() * 100}}"></md-progress-linear>
+
+                    <div>
+                        <md-button class="md-primary" ng-click="addLogo(file.relativePath)">
+                            Add
+                        </md-button>
+
+                        <md-button class="md-warn" ng-click="file.cancel()">
+                            Remove
+                        </md-button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            -->
+
+        </div>
+        <md-divider></md-divider>
+    </div>
+
+    <md-grid-list md-cols-sm="4" md-cols="8" md-row-height="200px" md-gutter="10px">
+
+        <md-grid-tile ng-repeat="logo in view.getLogos()">
+            <div class="tile">
+                <ng-md-icon class="icon delete" icon="delete" size="20" ng-click="view.deleteLogo(logo)"></ng-md-icon>
+                <div class="image" layout layout-align="center center">
+                    <img ng-src="{{::logo.src}}"/>
+                </div>
+                <div class="caption">{{::logo.name}}</div>
+            </div>
+        </md-grid-tile>
+    </md-grid-list>
+</div>
+

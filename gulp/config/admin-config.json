@@ -1,0 +1,6 @@
+{
+    "prefix":   "admin",
+    "appDir":   "../app/admin/",
+    "appHtml":  "admin.app.html",
+    "appJs":    "admin.app.js"
+}

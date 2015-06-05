@@ -1,0 +1,29 @@
+<span class="search" >
+    <rm-booking-list bookings="search.bookings" search="true"></rm-booking-list>
+
+    <rm-spinner ng-show="search.loading"></rm-spinner>
+
+    <div class="search-controls">
+        <h4>Room Size?</h4>
+        <div class="btn-group">
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minCapacity" rm-btn-radio="0">All</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minCapacity" rm-btn-radio="4">Small</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minCapacity" rm-btn-radio="8">Medium</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minCapacity" rm-btn-radio="12">Large</label>
+        </div>
+
+        <h4>How Long?</h4>
+        <div class="btn-group" >
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minLength" rm-btn-radio="0">All</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minLength" rm-btn-radio="30">30 mins</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minLength" rm-btn-radio="60">1 hour</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.minLength" rm-btn-radio="120">2 hours</label>
+        </div>
+
+        <h4>Vacant Only?</h4>
+            <div class="btn-group" >
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.busy" rm-btn-radio="true">All</label>
+            <label ng-change="search.go()" class="btn btn-primary" ng-model="search.query.busy" rm-btn-radio="false">Vacant Only</label>
+        </div>
+    </div>
+</span>

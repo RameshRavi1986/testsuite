@@ -1,0 +1,19 @@
+.capacity-icon {
+    padding:5px;
+    height: 30px;
+    color: #000000;
+}
+
+.capacity-icon > * {
+    padding:2px;
+}
+
+.capacity-icon .icon {
+    margin-bottom:-2px;
+}
+
+.capacity-icon .text {
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 24px;
+}

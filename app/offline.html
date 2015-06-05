@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--use http equiv as a fall back refresh mechanism if js fails -->
+    <meta http-equiv="refresh" content="7; url=/">
+    <title>Room Mate : Offline</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Room mate server is offline:</h1>
+<p id="count"></p>
+
+<script>
+    var count = 5;
+    var countEl = document.getElementById("count");
+
+    setInterval(function() {
+        if(count == 0)
+        {
+            window.location = "/";
+            return;
+        }
+
+        countEl.innerHTML = "Reconnect in " + count + " seconds";
+        count--;
+    },1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<smil>
+<head>
+<meta http-equiv="Refresh" content="10" />
+</head>
+<body systemComponent="http://www.w3.org/1999/xhtml">
+<text src="http://roommate/panel/auto/?cacheBuster" type="text/html">
+  <param name="cacheControl" value="noCache"/>
+</text>
+</body>
+</smil>

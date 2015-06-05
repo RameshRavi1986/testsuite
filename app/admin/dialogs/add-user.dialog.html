@@ -1,0 +1,50 @@
+<md-dialog aria-label="Add User" class="dialog add-user-dialog">
+    <md-toolbar class="md-accent dialog-header" layout="row" layout-align="space-between center">
+        <div class="dialog-title">Add User</div>
+    </md-toolbar>
+    <md-content>
+
+        <div>
+        <label class="select-label" for="user-type-select">Type</label>
+        <select id="user-type-select" ng-model="user.type" ng-options="type.id as type.value for type in userTypes" flex></select>
+
+        <label class="select-label" for="user-group-select">Group</label>
+        <select id="user-group-select" ng-model="user.group" ng-options="group.id as group.value for group in userGroups" flex></select>
+        </div>
+
+        <md-input-container>
+            <label>User</label>
+            <input ng-model="user.name">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Display Name</label>
+            <input ng-model="user.displayName">
+        </md-input-container>
+
+        <div ng-show="user.type == 1">
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="user.password" type="password" name="password">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Password Repeat</label>
+                <input ng-model="user.passwordRepeat" type="password" name="password">
+            </md-input-container>
+        </div>
+
+        <div ng-show="alert" class="error">
+            {{alert}}
+        </div>
+    </md-content>
+    <div class="md-actions" layout="row">
+        <md-button ng-click="confirm()">
+            Confirm
+        </md-button>
+
+        <md-button ng-click="cancel()">
+            Cancel
+        </md-button>
+    </div>
+</md-dialog>

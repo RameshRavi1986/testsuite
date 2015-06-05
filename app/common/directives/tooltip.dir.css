@@ -1,0 +1,13 @@
+.tooltip{
+    width : 250px;
+}
+.tooltip .target{
+    display: none;
+}
+.tooltip:hover .target {
+    display:block;
+    position:absolute;
+    overflow:hidden;
+    font-weight: bold;
+    background-color: #58bb48;
+}

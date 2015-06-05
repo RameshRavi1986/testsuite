@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rm" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Room Mate : Admin</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=1024, initial-scale=1,user-scalable=no">
+
+    <!-- @exclude -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/common/css/common.app.css">
+
+</head>
+<body>
+
+<div ng-cloak class="admin">
+    <div style="max-width:300px;">
+    <div ng-controller="TimeCtrl as time" ng-control="update">
+        <h2>Time Offset</h2>
+        <p>{{time.current | date:"h:mm a"}}</p>
+        <div>
+            <button class="btn btn-primary" ng-click="time.updateOffset(-1)">-1</button>
+            <span>{{time.offset}}</span>
+            <button class="btn btn-primary" ng-click="time.updateOffset(+1)">+1</button>
+        </div>
+    </div>
+
+    <div ng-controller="SettingsCtrl as settings">
+        <h2>Settings</h2>
+        <form class="form-inline" role="form">
+
+        <div class="form-group">
+            <label for="modeSelect">Panel Mode</label>
+            <select id="modeSelect" class="form-control input-medium" ng-model="settings.mode" ng-change="settings.update()">
+                <option value="0">Default</option>
+                <option value="1">Video</option>
+                <option value="2">News</option>
+            </select>
+            <p>Current mode: {{settings.selectedMode}}</p>
+        </div>
+        <br>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="settings.panelBookingEnabled" ng-change="settings.update()">
+                Booking Enabled
+            </label>
+        </div>
+        </form>
+
+
+    </div>
+
+    <div ng-view ng-hide="header.error"></div>
+    </div>
+</div>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.services"></script>
+-->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+
+<script src="admin2.app.js"></script>
+
+<script src="directives/time-ctrl.js"></script>
+<script src="directives/settings-ctrl.js"></script>
+
+<script src="/panel/services/header-data.svc.js"></script>
+
+
+</body>
+</html>

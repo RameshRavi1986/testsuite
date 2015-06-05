@@ -1,0 +1,46 @@
+
+.tp {
+
+}
+
+
+
+.tp-wrapper {
+    display:none;
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    text-align:center;
+
+    background-color: rgba(100,100,100, 0.7);
+    z-index: 102;
+}
+.tp-wrapper.active {
+    display:block;
+}
+
+.tp-content {
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    width: 200px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.tp-icon,
+.tp-row {
+    cursor:pointer;
+}
+
+.tp-row:hover:not(.disabled) {
+    background-color: #00b3ff;
+}
+
+.tp-row.disabled {
+    opacity: 0.5;
+    cursor:not-allowed;
+}

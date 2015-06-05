@@ -1,0 +1,35 @@
+
+        <div class="modal-header">
+            <h3 class="modal-title">Book now</h3>
+        </div>
+        <div class="modal-body">
+            <div>
+                <p class="time">
+                    {{::booking.start | date: "HH:mm"}} - {{booking.end | date: "HH:mm"}}
+                </p>
+                <p>{{getStatus()}}</p>
+
+                <h3>How Long?</h3>
+                <button class="btn btn-primary" title="minus" ng-click="minus()">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <span>{{length}} minutes</span>
+                <button class="btn btn-primary" title="plus" ng-click="plus()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+
+                <br>
+                <div>
+                    <input class="form-control" type="text">Name</input>
+                </div>
+                <br>
+                <div>
+                    <input class="form-control" type="text">Name</input>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-success" ng-click="ok()">OK</button>
+            <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+        </div>

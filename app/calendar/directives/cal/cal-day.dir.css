@@ -1,0 +1,40 @@
+
+.cal-day {
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+    border-right: 1px solid #ccc;
+}
+
+.cal-day .cal-container-background {
+    height:100%;
+}
+
+.cal-day .cal-container {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    cursor: crosshair;
+}
+
+.cal-day .cal-container.on-drag-hover {
+    background: rgba(20, 20, 40, 0.5);
+}
+
+.cal-day .cal-background-A {
+    height:100%;
+    width:100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
+}
+
+.cal-day .cal-background-B {
+    height:100%;
+    width:100%;
+    border-bottom: 1px solid #ccc;
+}

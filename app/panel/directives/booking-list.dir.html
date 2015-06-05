@@ -1,0 +1,19 @@
+<div class="booking-list">
+
+    <div class="info" ng-hide="$scope.bookings.length > 0">{{list.getMessage()}}</div>
+
+    <div class="item" ng-repeat="booking in list.getVisibleBookings()">
+        <div rm-booking data-icons="true"></div>
+    </div>
+
+    <div class="controls" ng-show="list.getNumPages() > 1">
+        <span class="btn left" ng-disabled="!list.prevPageEnabled()" rm-tap="list.prevPage()">
+            <rm-icon size="90" icon="before"></rm-icon>
+        </span>
+
+        <span>{{list.getCurrentPage()}} / {{list.getNumPages()}}</span>
+        <span ng-disabled="!list.nextPageEnabled()" class="btn right" rm-tap="list.nextPage()">
+            <rm-icon size="90" icon="next"></rm-icon>
+        </span>
+    </div>
+</div>

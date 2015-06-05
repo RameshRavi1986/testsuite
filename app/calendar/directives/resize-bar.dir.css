@@ -1,0 +1,12 @@
+.resize-bar {
+    position:relative;
+    z-index: 50;
+    display:block;
+    width: 100%;
+    height: 5px;
+    cursor: row-resize;
+}
+
+.resize-bar.active {
+    background-color: #666;
+}

@@ -1,0 +1,6 @@
+{
+    "prefix":   "calendar",
+    "appDir":   "../app/calendar/",
+    "appHtml":  "calendar.app.html",
+    "appJs":    "calendar.app.js"
+}

@@ -1,0 +1,7 @@
+/* Room Mate Theme : Numis */
+
+.content {
+    background: url(/content/images/numis_coins_background.png) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

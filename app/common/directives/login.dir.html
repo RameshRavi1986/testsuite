@@ -1,0 +1,13 @@
+<div class="login">
+
+<div ng-if="auth.isAuthorized()">
+    <div class="text">{{auth.getUserDisplayName()}}</div>
+    <md-button class="btn" ng-click="logout()">Logout</md-button>
+</div>
+
+<div ng-if="!auth.isAuthorized()">
+    <div class="text">Not logged in</div>
+    <md-button class="btn" ng-click="login()">Login</md-button>
+</div>
+
+</div>

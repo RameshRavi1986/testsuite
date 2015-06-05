@@ -1,0 +1,114 @@
+
+.booking-dialog {
+    min-width: 1000px;
+}
+
+.booking-dialog md-content {
+    padding: 24px;
+}
+
+.booking-dialog .dialog-title {
+    font-size: 30px;
+}
+
+.booking-dialog .section {
+    min-height: 80px;
+    margin: 0px 0 0px 0;
+}
+.booking-dialog .right {
+    width: 420px;
+    margin-left:10px;
+}
+
+.booking-dialog md-divider {
+    margin-bottom: 20px;
+}
+
+.booking-dialog .select-label {
+    min-width: 50px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.booking-dialog .color-preview {
+    border: solid 1px #CCC;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.booking-dialog .logo-preview-header {
+    text-align: center;
+}
+
+.booking-dialog .logo-preview-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.booking-dialog .logo-preview {
+    text-align: center;
+    border: 2px dashed grey;
+    margin: 10px;
+}
+
+.booking-dialog .logo-preview img {
+    max-width: 400px;
+    max-height: 100px;
+}
+
+.booking-dialog .ng-invalid{
+    /*border: 1px solid pink !important; */
+}
+
+.booking-dialog .time {
+    align-items: center;
+    min-height: 30px;
+}
+
+.booking-dialog .time.error input {
+    background: red;
+}
+
+.booking-dialog .time input {
+    width: 80px;
+    font-size: 24px;
+}
+
+.booking-dialog .total-attendees {
+    font-size: 24px;
+    width: 150px;
+}
+
+.booking-dialog .date-stamp {
+    font-size:12px;
+}
+
+.booking-dialog .prepared-by {
+    display:block;
+    height: 30px;
+    margin: 15px;
+}
+
+
+
+
+@-webkit-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Webkit */
+@keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Opera and prob css3 final iteration */
+
+.booking-dialog .capacity-warning {
+    display: none;
+    fill: darkred;
+    -webkit-animation: blink normal 2s infinite ease-in-out;
+    animation: blink normal 2s infinite ease-in-out;
+}
+
+.booking-dialog .capacity-warning.active {
+    display:block;
+}
+
+
+
+
+
+

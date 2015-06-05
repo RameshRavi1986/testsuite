@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RoomMate : Admin</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Vendor : Common -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/restangular/dist/restangular.min.js"></script>
+    <!--<script src="/bower_components/stop-angular-overrides/stop-angular-overrides.js"></script>-->
+    <script src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+    <!-- Vendor : Calendar & Admin -->
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+
+    <!-- Vendor : UI Grid -->
+    <link rel="stylesheet" href="/common/css/ui-grid.css">
+    <link rel="stylesheet" href="/common/css/ui-grid.fonts.css">
+    <script src="/bower_components/angular-ui-grid/ui-grid.min.js"></script>
+
+    <!-- Vendor : Admin -->
+    <script src="/bower_components/ng-flow/dist/ng-flow-standalone.min.js"></script>
+
+    <!-- App -->
+    <link rel="stylesheet" href="/common/css/common.app.css">
+    <link rel="stylesheet" href="/admin/css/admin.app.css">
+    <script src="/admin/admin.app.js"></script>
+
+    <!-- Login -->
+    <link rel="stylesheet" property='stylesheet' href="/common/directives/login.dir.css">
+    <script src="/common/directives/login.dir.js"></script>
+
+    <!-- Views-->
+    <link rel="stylesheet" href="/admin/views/main.view.css">
+    <script src="/admin/views/main.view.js"></script>
+
+    <link rel="stylesheet" href="/admin/views/logos.view.css">
+    <script src="/admin/views/logos.view.js"></script>
+
+    <link rel="stylesheet" href="/admin/views/users.view.css">
+    <script src="/admin/views/users.view.js"></script>
+
+    <link rel="stylesheet" href="/admin/views/panels.view.css">
+    <script src="/admin/views/panels.view.js"></script>
+
+    <!-- Dialogs -->
+    <link rel="stylesheet" href="/common/views/login.dialog.css">
+    <script src="/common/views/login.dialog.js"></script>
+
+    <script src="/common/views/logout.dialog.js"></script>
+
+    <link rel="stylesheet" href="/admin/dialogs/add-user.dialog.css">
+    <script src="/admin/dialogs/add-user.dialog.js"></script>
+
+
+    <!-- Services-->
+    <script src="/common/services/auth.svc.js"></script>
+
+    <!-- Common -->
+    <script src="/common/services/rm-config.svc.js"></script>
+    <script src="/common/services/booking.svc.js"></script>
+    <script src="/common/services/header-data.svc.js"></script>
+    <script src="/common/services/rest-data.svc.js"></script>
+    <script src="/common/services/logo-list.svc.js"></script>
+    <script src="/common/services/user-list.svc.js"></script>
+    <script src="/common/services/panel-status.svc.js"></script>
+
+    <script src="/common/classes/booking.js"></script>
+    <script src="/common/directives/icon.dir.js"></script>
+    <script src="/common/directives/brand-img.dir.js"></script>
+
+
+    <!-- Dev Scripts -->
+    <script src="/dev/ng-stats.dev.js"></script>
+    <script src="/dev/app.dev.js"></script>
+    <script src="/dev/templates.dev.js"></script>
+
+
+</head>
+<body flow-prevent-drop>
+<div class="loading" ng-hide="true">
+    <h2>Loading...</h2>
+</div>
+<div class="content" ng-cloak ui-view>
+</div>
+</body>
+</html>

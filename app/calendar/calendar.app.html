@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RoomMate : Calendar</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Vendor : Common -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-websocket/angular-websocket.min.js"></script>
+    <script src="/bower_components/restangular/dist/restangular.min.js"></script>
+    <!-- <script src="/bower_components/stop-angular-overrides/stop-angular-overrides.js"></script>-->
+   <script src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+   <!-- Vendor : UI Grid -->
+    <link rel="stylesheet" href="/common/css/ui-grid.css">
+    <link rel="stylesheet" href="/common/css/ui-grid.fonts.css">
+    <script src="/bower_components/angular-ui-grid/ui-grid.min.js"></script>
+
+    <!-- Vendor : Calendar Only -->
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+
+    <!-- App -->
+    <link rel="stylesheet" href="/common/css/common.app.css">
+    <link rel="stylesheet" href="/calendar/css/cal.app.css">
+    <script src="/calendar/calendar.app.js"></script>
+
+    <!-- Time Picker -->
+    <link rel="stylesheet" href="/calendar/directives/time-picker/time-picker.dir.css">
+    <script src="/calendar/directives/time-picker/time-picker.dir.js"></script>
+    <script src="/calendar/directives/time-picker/time-input.dir.js"></script>
+
+    <!-- Combine Scroll -->
+    <script src="/calendar/directives/combine-scroll.dir.js"></script>
+
+    <!-- Resizer -->
+    <link rel="stylesheet" href="/calendar/directives/resize-bar.dir.css">
+    <script src="/calendar/directives/resize-bar.dir.js"></script>
+
+    <script src="/calendar/directives/dragdrop.js"></script>
+
+
+    <!-- Login -->
+    <link rel="stylesheet" href="/common/directives/login.dir.css">
+    <script src="/common/directives/login.dir.js"></script>
+
+    <!-- Alert Window -->
+    <link rel="stylesheet" href="/calendar/directives/cal/cal-alert.dir.css">
+    <script src="/calendar/directives/cal/cal-alert.dir.js"></script>
+
+    <link rel="stylesheet" href="/calendar/directives/cal/cal-alert-list.dir.css">
+    <script src="/calendar/directives/cal/cal-alert-list.dir.js"></script>
+
+    <link rel="stylesheet" href="/calendar/directives/visitor-report/visitor-report.dir.css">
+    <script src="/calendar/directives/visitor-report/visitor-report.dir.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="/calendar/directives/booking-icons.dir.css">
+    <script src="/calendar/directives/booking-icons.dir.js"></script>
+
+    <link rel="stylesheet" href="/calendar/directives/capacity-icon.dir.css">
+    <script src="/calendar/directives/capacity-icon.dir.js"></script>
+
+
+    <!-- Attendee List -->
+    <link rel="stylesheet" href="/calendar/directives/attendee-list.dir.css">
+    <script src="/calendar/directives/attendee-list.dir.js"></script>
+
+    <!-- Calendar -->
+    <link rel="stylesheet" href="/calendar/directives/cal/cal-day.dir.css">
+    <script src="/calendar/directives/cal/cal-day.dir.js"></script>
+    <script src="/calendar/directives/cal/cal-day-header.dir.js"></script>
+
+    <link rel="stylesheet" href="/calendar/directives/cal/cal-booking.dir.css">
+    <script src="/calendar/directives/cal/cal-booking.dir.js"></script>
+
+    <link rel="stylesheet" href="/calendar/directives/date-picker/date-picker.dir.css">
+    <script src="/calendar/directives/date-picker/date-picker.dir.js"></script>
+    <script src="/calendar/directives/cal/cal-edit-btn.dir.js"></script>
+
+
+    <!-- Layouts -->
+    <script src="/calendar/views/cal.main.js"></script>
+    <script src="/calendar/views/cal.main.default.js"></script>
+
+    <!-- Dialogs -->
+    <link rel="stylesheet" href="/calendar/dialogs/booking.dialog.css">
+    <script src="/calendar/dialogs/booking.dialog.js"></script>
+
+    <link rel="stylesheet" href="/common/views/login.dialog.css">
+    <script src="/common/views/login.dialog.js"></script>
+
+    <script src="/common/views/logout.dialog.js"></script>
+
+    <!-- Services-->
+    <script src="/calendar/services/edit-booking.svc.js"></script>
+    <script src="/calendar/services/display-params.svc.js"></script>
+
+
+    <!-- Common -->
+    <script src="/common/services/rm-config.svc.js"></script>
+    <script src="/common/services/auth.svc.js"></script>
+    <script src="/common/services/booking.svc.js"></script>
+    <script src="/common/services/header-data.svc.js"></script>
+    <script src="/common/services/rest-data.svc.js"></script>
+    <script src="/common/services/logo-list.svc.js"></script>
+    <script src="/common/classes/booking.js"></script>
+    <script src="/common/directives/icon.dir.js"></script>
+    <script src="/common/directives/brand-img.dir.js"></script>
+    <script src="/common/filters/datestamp.filter.js"></script>
+
+    <!-- Dev Scripts -->
+    <script src="/dev/ng-stats.dev.js"></script>
+    <script src="/dev/app.dev.js"></script>
+    <script src="/dev/templates.dev.js"></script>
+
+
+</head>
+<body>
+<div class="loading" ng-hide="true">
+    <h2>Loading...</h2>
+</div>
+<div class="content" ng-cloak ui-view>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+    "prefix":   "panel",
+    "appDir":   "../app/panel/",
+    "appHtml":  "panel.app.html",
+    "appJs":    "panel.app.js"
+}

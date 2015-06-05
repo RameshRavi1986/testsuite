@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# v4
+
+FALLBACK:
+/ /offline.html
+
+NETWORK:
+*
+
+SETTINGS:
+prefer-online

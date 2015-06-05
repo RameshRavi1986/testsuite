@@ -1,0 +1,164 @@
+
+.add-booking {
+    position:relative;
+    display: block;
+    top:10px;
+    width: 950px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-booking .panel {
+    position:absolute;
+    width:   450px;
+    height:  220px;
+
+    background-color: #1d3d5b;
+    padding: 5px 20px;
+}
+
+
+.add-booking h2 {
+    margin-top:0;
+}
+
+.add-booking h2 .icon
+{
+    font-size: 24px;
+    padding: 10px 15px 10px 0;
+}
+
+.add-booking h2 .text
+{
+    position:relative;
+    top:-3px;
+}
+
+
+.add-booking .panel.contact-info {
+    left:0;
+    top: 0;
+}
+
+
+.add-booking .panel.location {
+    left: 0px;
+    top: 250px;
+    height: 150px;
+}
+
+.add-booking .panel.title {
+    left: 500px;
+    height: 120px
+}
+
+.add-booking .panel.time {
+    left:    500px;
+    top: 150px;
+    height: 180px;
+
+}
+
+.add-booking .confirm
+{
+    position: absolute;
+    left:500px;
+    top:355px;
+}
+
+.add-booking .time-data
+{
+    display: inline-block;
+    height: 50px;
+    padding-right: 10px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.add-booking .time-data.start
+{
+    padding-left:30px;
+}
+
+.add-booking .time .buttons .icon
+{
+    font-size: 36px;
+    padding: 10px;
+}
+
+
+.add-booking .time-data.arrow .icon
+{
+    font-size: 45px;
+}
+
+.add-booking .time-data .text
+{
+    font-size: 40px;
+    color: #428bca;
+    -webkit-transition: color 0.5s ease-out;
+    transition: color 0.5s ease;
+}
+
+.add-booking .time .length
+{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+.add-booking .summary {
+    display:block;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.add-booking .name
+{
+    color:#fff
+}
+
+.add-booking .email,
+.add-booking .number
+{
+    font-size:20px;
+}
+
+
+
+
+.add-booking .message
+{
+    display:inline;
+}
+
+.add-booking .ok
+{
+    color:white !important;
+}
+
+.add-booking .error
+{
+    color:red !important;
+}
+
+
+/*drop down menu styling*/
+.add-booking .dropdown-menu {
+    width: 930px;
+}
+
+.add-booking .dropdown-menu li {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 24px;
+    display:inline-block;
+}
+
+.add-booking .dropdown-menu a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

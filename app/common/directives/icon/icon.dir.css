@@ -1,0 +1,47 @@
+rm-icon {
+    fill:white;
+    line-height: normal;
+}
+
+rm-icon .icon {
+    position:relative;
+    display:block;
+}
+
+rm-icon .icon svg {
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+/* Spin fowards*/
+rm-icon.spin .icon {
+    -animation: icon-spin 1s infinite linear;
+    -webkit-animation: icon-spin 1s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes icon-spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+/* Spin backwards*/
+rm-icon.spin-backwards .icon {
+    -animation: icon-spin-backwards 1s infinite linear;
+    -webkit-animation: icon-spin-backwards 1s infinite linear;
+}
+
+@-webkit-keyframes icon-spin-backwards {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(-360deg);}
+}
+
+@keyframes icon-spin-backwards {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(-360deg);}
+}

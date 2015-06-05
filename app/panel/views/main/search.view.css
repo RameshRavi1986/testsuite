@@ -1,0 +1,35 @@
+
+/*search */
+.search-controls {
+    position:absolute;
+    right:100px;
+    width: 300px;
+    height: 200px;
+}
+
+.search .booking-list .controls {
+    top:320px;
+    right:100px;
+}
+
+.search .spinner {
+    position: absolute;
+    top:0px;
+    right:25px;
+}
+
+.search .form-control[readonly],
+.search .form-control {
+    cursor: text;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.search .btn-group {
+    height:40px;
+}
+
+.search .btn-group > * {
+    float:left;
+    margin-right: 5px;
+}

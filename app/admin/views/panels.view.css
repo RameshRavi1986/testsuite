@@ -1,0 +1,20 @@
+.panels-view .grid {
+    width: 700px;
+    height: 600px;
+
+    font-size:12px;
+}
+
+.panels-view .controls > * {
+    margin:10px;
+}
+
+.panels-view .status-icon {
+    color:#c40000;;
+    font-size: 18px;
+    text-align: center;
+}
+
+.panels-view .status-icon.online {
+    color:#20a033;
+}

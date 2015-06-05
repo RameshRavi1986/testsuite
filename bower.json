@@ -1,0 +1,26 @@
+{
+  "name": "room-mate",
+  "description": "Room Mate",
+  "version": "0.1.0",
+  "homepage": "",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-ui-router": "0.2.x",
+    "angular-bootstrap": "0.12.x",
+    "angular-bloodhound": "",
+    "bootstrap": "3.2.x",
+    "angular-websocket": "~1.0.8",
+    "angular-material": "~0.9.x",
+    "restangular": "~1.4.x",
+    "ng-flow": "~2.6.x",
+    "angular-material-icons": "~0.4.0",
+    "stop-angular-overrides": "~0.5.0",
+    "angular-local-storage": "~0.1.5",
+    "angular-ui-grid": "~3.0.0-rc.20"
+  },
+  "resolutions": {
+    "angular": "1.3.15"
+  }
+}

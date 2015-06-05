@@ -1,0 +1,154 @@
+
+.cal-booking {
+    position:absolute;
+    left:0;
+    right:0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+}
+
+cal-booking.dummy {
+    pointer-events: none;
+}
+
+cal-booking.warning .summary.default {
+    background-color:#cc0000 !important;
+}
+
+.cal-booking .category {
+    position:absolute;
+    top: -1px; /* negative values prevent weird scaling artifacts on chrome when using percentages for booking size*/
+    bottom: -1px;
+    left:0;
+    width:10px;
+    opacity: 0.7
+}
+
+.cal-booking .category:hover {
+    opacity: 1.0;
+}
+
+/*show category popup on hover*/
+.cal-booking .category:hover .popup {
+    display:block;
+    z-index: 1;
+}
+
+
+.cal-booking .click-area {
+    position:absolute;
+    z-index: 40; /* must be less than 80 to avoid clash with angular material dialog*/
+    top:0px;
+    left:10px;
+    right: 0;
+    bottom:0;
+}
+
+.cal-booking .summary.default {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left:10px;
+    right:0;
+    background-color:#ccc;
+    opacity: 0.7;
+    overflow: hidden;
+    padding-top:2px;
+}
+
+/*highlight summary when click area is hovered using sibling selector*/
+.cal-booking .resize-bar:hover ~ .summary,
+.cal-booking .click-area:hover ~ .summary{
+    opacity: 1.0;
+}
+
+.cal-booking.dirty .summary{
+    opacity: 0.7  !important;
+}
+
+/*show popup on hover when booking is small. Need to hide it if dragging*/
+.cal-booking.medium .click-area:hover  ~ .summary.popup,
+.cal-booking.small  .click-area:hover  ~ .summary.popup {
+    display:block;
+}
+
+.cal-booking.on-dragging .summary.popup {
+    display:none !important;
+}
+
+
+.cal-booking .summary.default {
+    padding-left:2px;
+    pointer-events: none;
+}
+
+.cal-booking .summary.popup {
+    display:none;
+
+    top: -47px;
+    height: 65px;
+    opacity: 1.0;
+    z-index: 2;
+}
+
+.cal-booking .summary > * {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 40px;
+}
+
+.cal-booking .summary .title {
+    padding-right: 30px;
+    font-size: 14px;
+}
+
+.cal-booking .summary .organizer {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.cal-booking .summary .time {
+    margin-top: 4px;
+    font-size: 10px;
+}
+
+/*hide the time and organizer when the booking is medium*/
+.cal-booking.medium .summary.default .organizer,
+.cal-booking.medium .summary.default .time {
+    display: none;
+}
+
+/*hide the whole summary when the booking is small*/
+.cal-booking.small .summary.default > * {
+    display:none;
+}
+
+.cal-booking .booking-icons {
+    position:absolute;
+    top: 2px;
+    right:1px;
+}
+
+.cal-booking.dirty .summary.default {
+
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 3px,
+        #aaa 3px,
+        #aaa 6px),#ccc;
+}
+
+.resize-bar {
+    /*background: red;*/
+}
+
+.resize-bar.bottom {
+    position:absolute;
+    bottom: 0;
+}
+

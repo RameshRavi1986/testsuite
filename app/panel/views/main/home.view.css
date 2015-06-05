@@ -1,0 +1,182 @@
+.home {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 40px;
+}
+
+.home .now,
+.home .next {
+    position:relative;
+    display:inline-block;
+    margin:20px;
+    margin-top:5px;
+    max-width: 32%;
+    overflow: hidden;
+    z-index: 2;
+    text-align: left;
+    left: 15px;
+}
+
+
+.home .booking .organizer {
+    margin-top:-5px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.home .media {
+    position:absolute;
+    right: 0px;
+    top:40px;
+    height: 400px;
+    width: 360px;
+    text-align: center;
+    background-color: rgba(100,100,100,0.2);
+    padding:20px;
+
+}
+
+.home .media-content {
+    position: absolute;
+    top:15px;
+    bottom:15px;
+    right: 20px;
+    left:20px;
+    /*
+    top: 50%;
+    transform: translateY(-50%);
+    */
+}
+
+
+.home .caption {
+    font-size: 30px;
+    color:white;
+}
+
+.home .caption {
+    -webkit-animation-duration: 2000ms;
+    -webkit-animation-name: home-blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.home .book.btn {
+    margin-left:10px;
+}
+
+@-webkit-keyframes home-blink {
+    0% {  opacity: 0;  }
+    50% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+/* default home */
+.home.default .now  {
+    position:absolute;
+    left: 15px;
+    top: 80px;
+}
+
+.home.default .next  {
+    position:absolute;
+    top:80px;
+    left: auto;
+    right: 15px;
+    text-align: right;
+}
+
+/* video/news status icon */
+.home.video .status-icon,
+.home.news .status-icon {
+    margin-left: -170px;
+}
+
+/*status icon */
+.home .status-icon {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.9;
+    width:250px;
+    display: block;
+    top: 40px;
+    text-align: center;
+    left: 50%;
+    margin-left: -125px;
+    text-shadow: 0 0 5px #42465a;
+}
+
+.home .status-icon.logo {
+    width:400px;
+    margin-left: -200px;
+}
+
+.home .status-icon.logo img {
+    max-width: 400px;
+}
+
+.home .status-icon.ng-hide-add,
+.home .status-icon.ng-hide-remove {
+    /* this is required as of 1.3x to properly
+       apply all styling in a show/hide animation */
+    transition:0s linear all;
+}
+
+.home .status-icon.ng-hide-add-active,
+.home .status-icon.ng-hide-remove-active {
+    /* the transition is defined in the active class */
+    transition:1s linear all;
+}
+
+.home .status-icon.ng-hide {
+    opacity:0;
+}
+
+
+.home .status-label {
+    color: inherit;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* news home */
+.home .news-item {
+    font-size: 16px;
+    text-align: left;
+}
+.home .news-item {
+    -webkit-column-width: 360px;
+    column-width: 360px;
+    height: 100%;
+}
+
+.home .news-item .text {
+
+}
+
+.home .news-item .title {
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.home .news-item .sub {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+/*video*/
+.home video {
+    margin: 0px;
+}
+
+.home .video-item {
+    /*position: fixed;*/
+    width:320px;
+    height: 180px;
+    top:280px;
+    left:900px;
+}

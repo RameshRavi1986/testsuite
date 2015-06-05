@@ -1,0 +1,43 @@
+<span rm-timeline></span>
+
+<div class="home" ng-class="home.class">
+
+    <div class="now">
+        <h4>Now</h4>
+        <div rm-dynamic-booking="home.currentBooking" data-now="true"></div>
+        <div ng-show="home.showStatus()">
+            <p>{{home.status}}</p>
+        </div>
+    </div>
+    <br/>
+    <div class="next">
+        <h4>Next Up</h4>
+        <div rm-dynamic-booking="home.nextBooking"></div>
+    </div>
+
+
+    <div class="status-icon logo" ng-show="home.logoSrc">
+        <img ng-src="{{home.logoSrc}}">
+    </div>
+
+    <div class="status-icon busy" ng-show="home.busyIcon">
+        <rm-icon data-icon="busy" size="250"></rm-icon>
+        <div class="status-label">Booked</div>
+    </div>
+
+    <div class="status-icon vacant" ng-show="home.vacantIcon">
+        <rm-icon data-icon="vacant" size="250"></rm-icon>
+        <div class="status-label">Vacant</div>
+    </div>
+
+
+    <!-- video mode -->
+    <ng-include src="'layouts/content-video.html'" ng-if="home.showVideo"></ng-include>
+
+    <!-- news mode -->
+    <div class="media" ng-if="home.showNews">
+        <div class="media-content" rm-news="home.news"></div>
+    </div>
+
+</div>
+

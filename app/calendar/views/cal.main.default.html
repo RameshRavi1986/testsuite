@@ -1,0 +1,28 @@
+<div combine-scroll scroll-top="initialScroll">
+
+    <div class="horizontal-scroll overview-top">
+
+        <div layout="row" class="horizontal-scroll" ng-style="getStyleTop()">
+            <div flex ng-repeat="room in overviewCtrl.rooms">
+                <div class="title">{{::room.name}} ({{::room.capacity}})</div>
+                <div class="info">{{::room.info}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overview-left vertical-scroll">
+        <div rm-cal-day-header ng-style="getStyleLeft()"></div>
+    </div>
+
+    <div class="overview-main horizontal-scroll vertical-scroll ">
+        <div layout="row" class="cal-flex" ng-style="getStyleMain()">
+            <div flex class="cal-flex" ng-repeat="room in overviewCtrl.rooms">
+                <rm-cal-day room="::room" date="display.date"></rm-cal-day>
+            </div>
+
+            <div class="cal-time-bar" ng-style="getStyleTimeBar()"></div>
+
+        </div>
+    </div>
+</div>
+

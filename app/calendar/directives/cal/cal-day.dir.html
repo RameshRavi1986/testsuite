@@ -1,0 +1,13 @@
+<div class="cal-day">
+    <div class="cal-container-background" layout="column">
+        <div flex class="cal-background-A" ng-repeat-start="i in ::times"></div>
+        <div flex class="cal-background-B" ng-repeat-end></div>
+    </div>
+
+    <div class="cal-container" ng-dblclick="showAddDialog($event)" rm-on-drop="onDrop($event,$data,$delta)">
+        <div ng-repeat="booking in bookings">
+            <cal-booking></cal-booking>
+        </div>
+    </div>
+
+</div>

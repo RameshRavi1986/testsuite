@@ -1,0 +1,9 @@
+<!-- Footer  -->
+<div class="attendee-list" layout="column" layout-align="start end">
+    <div class="controls">
+        <md-button class="md-raised md-warn" ng-click="delete()" ng-show="selectedRows.length > 0">Delete</md-button>
+        <md-button class="md-raised" ng-click="add()">Add</md-button>
+    </div>
+
+    <div ui-grid="gridOptions" ui-grid-selection ui-grid-edit class="grid"></div>
+</div>

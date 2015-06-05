@@ -1,0 +1,15 @@
+<!-- Note the use of one time binding syntax {::expr} to keep the number of watchers down -->
+
+<div class="cal-alert" ng-class="getClass()" rm-cal-edit-btn>
+    <rm-booking-icons booking="::booking"></rm-booking-icons>
+
+    <div class="room">{{::booking.getRoomName()}}</div>
+    <div class="title">{{::booking.title}}</div>
+    <div class="organizer">{{::booking.organizer.name}}</div>
+
+    <span class="alert-text" layout>
+        <ng-md-icon icon="alarm" size="14"></ng-md-icon>
+        <div class="time">{{::booking.startStr}} - {{::booking.endStr}}</div>
+        <div flex class="start-info">{{::alertText()}}</div>
+    </span>
+</div>

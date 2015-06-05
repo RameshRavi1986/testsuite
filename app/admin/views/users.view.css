@@ -1,0 +1,10 @@
+.users-view .grid {
+    width: 700px;
+    height: 450px;
+
+    font-size:12px;
+}
+
+.users-view .controls > * {
+    margin:10px;
+}

@@ -1,0 +1,44 @@
+<div class="visitor-report">
+    <div class=" header">
+        <div class="date">{{dateStr}}</div>
+        <div class="text">{{message}}</div>
+
+        <div class="filter">
+            <form>
+            <md-radio-group ng-model="unsent" ng-change="refresh()" onfocus="blur(this)">
+                <md-radio-button value="false">All</md-radio-button>
+                <md-radio-button value="true">Unsent</md-radio-button>
+            </md-radio-group>
+            </form>
+        </div>
+    </div>
+
+    <div ng-if="visitors.length > 0">
+        <div class="visitor-info-list">
+            <div class="visitor-info" ng-repeat="visitor in visitors">
+                <div class="name">{{::visitor.name}} : {{::visitor.company}}</div>
+                <div class="status" ng-class="::{sent:visitor.sent}">
+                    <ng-md-icon icon="email" size="12"></ng-md-icon>
+                </div>
+
+                <div layout>
+                    <div layout>
+                        <ng-md-icon icon="alarm" size="14"></ng-md-icon>
+                        <div class="arrival">{{::visitor.arrival  | date:'shortTime'}}</div>
+                    </div>
+
+                    <div layout>
+                        <ng-md-icon icon="person" size="14"></ng-md-icon>
+                        <div class="host">{{::visitor.host}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <md-button class="md-raised md-primary" ng-click="generateEmail()" ng-show="showGenerateBtn()">Email</md-button>
+            <md-button class="md-raised md-primary" ng-click="generateCsv()" ng-show="showGenerateBtn()">Csv</md-button>
+        </div>
+    </div>
+
+</div>

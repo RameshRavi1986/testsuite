@@ -1,0 +1,22 @@
+- Add resize bar to bottom of cal booking
+- Allow time strings to be recompiled dynamically during resize. Use querySelectorAll to find div.time elements.
+- Add end-resize attribute to resizer directive to trigger booking save
+- Snap to nearest 15 minute interval during resize and sync with booking.
+- Validate booking times during resize to check valid. Consider adding updateMaxMin(booking) to booking.svc.
+- Cache the room booking data after search to allow updateMaxMin to be calculated locally
+
+
+- add booking on double click
+
+- move booking using drag drop directive
+
+- logo manager
+
+- category manager
+
+- notification sidebar
+
+- Make text on page unselectable
+
+- double click to add or edit
+

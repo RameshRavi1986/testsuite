@@ -1,0 +1,17 @@
+<div class="users-view">
+
+    <!--
+    <strong>Data Length:</strong> {{ gridOptions.data.length | number }}
+    <br>
+    <strong>Last Cell Edited:</strong> {{msg.lastCellEdited}}
+    <br>
+    -->
+
+    <div class="controls">
+        <md-button class="md-raised" ng-show="showAdd()" ng-click="add()">Add</md-button>
+        <md-button class="md-raised md-warn" ng-show="showDelete()" ng-click="delete()">Delete</md-button>
+    </div>
+    <div ui-grid="gridOptions" ui-grid-selection ui-grid-edit class="grid"></div>
+
+</div>
+

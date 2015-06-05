@@ -1,0 +1,14 @@
+<!-- Note the use of one time binding syntax {::expr} to keep the number of watchers down -->
+
+<div class="booking">
+
+    <div rm-icon="busy" class="busy" ng-show="::(icons && busy)"></div>
+    <div rm-icon="vacant" class="vacant" ng-show="::(icons && !busy)"></div>
+
+    <h3 class="title"><rm-book-btn ng-show="::bookBtnVisible"></rm-book-btn>{{::title}}</h3>
+    <p class="info" ng-show="::busy">{{::info}}</p>
+
+    <p class="time">
+        {{::booking.startStr}} - {{::booking.endStr}}
+    </p>
+</div>

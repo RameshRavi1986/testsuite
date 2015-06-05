@@ -1,0 +1,9 @@
+rm-timeline {
+    position: absolute;
+    left:20px;
+    top: 10px;
+    right: 20px;
+    height: 60px;
+
+//border:1px solid #fff;
+}

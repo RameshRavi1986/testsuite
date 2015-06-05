@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RoomMate : Panel</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=1024, initial-scale=1, user-scalable=no">
+
+  <base href=""/>
+
+  <!-- --<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"><!-- -->
+  <link rel="stylesheet" href="/panel/vendor/bootstrap.min.css"><!-- -->
+
+  <link rel="stylesheet" href="/common/css/common.app.css">
+
+  <link rel="stylesheet" href="/panel/css/panel.app.css">
+
+  <link rel="stylesheet" href="/content/css/panel.custom.css">
+
+  </head>
+  <body class="{{getTheme()}}" ng-controller="BodyCtrl">
+  <div ng-hide="true">
+      <h2 class="loading">Loading...</h2>
+  </div>
+  <!--preload brand image-->
+  <img style="display:none;" src="/content/images/brand_large.png"/>
+
+
+  <div class="content" ng-cloak ui-view>
+  </div>
+
+  <!-- Vendor : Common -->
+  <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/restangular/dist/restangular.min.js"></script>
+  <script src="/bower_components/stop-angular-overrides/stop-angular-overrides.js"></script>
+
+  <!-- Vendor : Panel Only -->
+  <script src="/panel/vendor/ui-bootstrap-typeahead-0.13.0.min.js"></script>
+  <script src="/bower_components/angular-bloodhound/dist/ngBloodhound.js"></script>
+
+  <!-- App -->
+  <script src="/panel/panel.app.js"></script>
+
+  <!-- Views -->
+  <script src="/panel/views/body.ctrl.js"></script>
+
+  <link rel="stylesheet" href="/panel/views/main.view.css">
+  <script src="/panel/views/main.view.js"></script>
+
+  <link rel="stylesheet" href="/panel/views/main/home.view.css">
+  <script src="/panel/views/main/home.view.js"></script>
+
+  <script src="/panel/views/main/today.view.js"></script>
+
+  <link rel="stylesheet" href="/panel/views/main/search.view.css">
+  <script src="/panel/views/main/search.view.js"></script>
+
+  <link rel="stylesheet" href="/panel/views/offline.view.css">
+  <script src="/panel/views/offline.view.js"></script>
+
+  <link rel="stylesheet" href="/panel/views/main/add-booking.view.css">
+  <script src="/panel/views/main/add-booking.view.js"></script>
+
+  <link rel="stylesheet" href="/panel/views/poster.view.css">
+  <script src="/panel/views/poster.view.js"></script>
+
+  <!-- Services -->
+  <script src="/panel/services/room-status.svc.js"></script>
+  <script src="/panel/services/touch.svc.js"></script>
+  <script src="/panel/services/contacts.svc.js"></script>
+  <script src="/panel/services/news.svc.js"></script>
+
+  <!-- Directives -->
+  <script src="/panel/directives/dynamic-booking.dir.js"></script>
+
+  <link rel="stylesheet" href="/panel/directives/menu-item.dir.css">
+  <script src="/panel/directives/menu-item.dir.js"></script>
+
+  <link rel="stylesheet" href="/panel/directives/tap.dir.css">
+  <script src="/panel/directives/tap.dir.js"></script>
+
+  <link rel="stylesheet" href="/panel/directives/timeline.dir.css">
+  <script src="/panel/directives/timeline.dir.js"></script>
+
+  <script src="/panel/directives/btn-radio.dir.js"></script>
+  <script src="/panel/directives/book-btn.dir.js"></script>
+  <script src="/panel/directives/news.dir.js"></script>
+
+  <!-- Spinner -->
+  <link rel="stylesheet" href="/panel/directives/spinner/spinner.dir.css">
+  <script src="/panel/directives/spinner/spinner.dir.js"></script>
+
+  <!-- Booking List -->
+  <link rel="stylesheet" href="/panel/directives/booking-list.dir.css">
+  <script src="/panel/directives/booking-list.dir.js"></script>
+  <script src="/panel/directives/booking.dir.js"></script>
+
+  <!-- Virtual Keyboard -->
+  <link rel="stylesheet" href="/panel/directives/keyboard/virtual-keyboard.dir.css"/>
+  <script src="/panel/directives/keyboard/virtual-keyboard.dir.js"></script>
+
+  <!-- Common -->
+  <script src="/common/services/rm-config.svc.js"></script>
+  <script src="/common/services/header-data.svc.js"></script>
+  <script src="/common/services/booking.svc.js"></script>
+  <script src="/common/services/rest-data.svc.js"></script>
+  <script src="/common/services/logo-list.svc.js"></script>
+  <script src="/common/classes/booking.js"></script>
+
+  <link rel="stylesheet" href="/common/directives/icon/icon.dir.css"/>
+  <script src="/common/directives/icon/icon.dir.js"></script>
+
+  <link rel="stylesheet" href="/common/directives/brand-img.dir.css">
+  <script src="/common/directives/brand-img.dir.js"></script>
+
+  <!-- Dev Scripts -->
+  <script src="/dev/ng-stats.dev.js"></script>
+  <script src="/dev/app.dev.js"></script>
+  <script src="/dev/templates.dev.js"></script>
+
+</body>
+</html>

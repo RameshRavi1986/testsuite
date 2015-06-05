@@ -1,0 +1,97 @@
+.visitor-report {
+    height:100%
+}
+
+.visitor-report .date {
+    padding-top:5px;
+    padding-left:10px;
+    font-size: 12px;
+}
+
+.visitor-report .text {
+    padding-left:10px;
+    color: grey;
+}
+
+.visitor-report .header {
+    border-bottom: solid 1px #DDD;
+    height: 60px;
+}
+
+.visitor-report .filter {
+    position: absolute;
+    right:0px;
+    top:0px;
+    font-size: 12px;
+}
+
+.visitor-report .filter md-radio-button {
+    margin: 5px;
+}
+button {
+    outline: none;
+}
+button,
+input:focus {  outline: none !important;}
+
+.visitor-report .visitor-info-list {
+    overflow-y: scroll;
+    position: absolute;
+    top: 60px;
+    bottom: 50px;
+    left:0;
+    right: 0;
+}
+
+.visitor-report .controls {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    left:0;
+    right:0;
+    padding-top: 10px;
+    bottom:10px;
+    text-align: center;
+    font-size: 12px;
+    border-top: solid 1px #DDD;
+}
+
+
+.visitor-info {
+    padding:10px;
+    border-bottom: solid 1px #DDD;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.visitor-info:hover {
+    background-color: #eee;
+}
+
+.visitor-info > * {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1px;
+}
+
+.visitor-info .name {
+    font-size: 14px;
+}
+
+.visitor-info .arrival {
+     min-width: 100px;
+ }
+
+.visitor-info .status {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    fill:#c40000;
+}
+
+.visitor-info .status.sent {
+    fill:#20a033;
+}
+

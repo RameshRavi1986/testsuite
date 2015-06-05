@@ -1,0 +1,45 @@
+.view {
+    position:absolute;
+    left:0;
+    right:0;
+    top:80px;
+    bottom:60px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.view .main {
+    position: relative;
+    overflow-y: auto;
+    padding:20px;
+}
+
+.view .side {
+    position: relative;
+    background: white;
+    flex: 0 0 300px;
+    border-left: solid 2px grey;
+    overflow-y:auto;
+}
+
+
+.view > .menu {
+    width:200px;
+    background: #eee;
+}
+
+.view > .menu ul {
+    list-style-type: none;
+    padding:0px;
+}
+
+.view > .menu li:hover {
+   background:#ccc;
+}
+
+.view > .menu a {
+    padding:10px;
+    display:block;
+    color:#333;
+    text-decoration: none;
+}

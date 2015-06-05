@@ -1,0 +1,62 @@
+<div class="add-booking">
+
+    <div class="panel location">
+        <h2 rm-icon="map-marker" text="Location"></h2>
+        <div>{{::booking.roomName}}</div>
+    </div>
+
+    <div class="panel title">
+        <h2><rm-icon icon="pencil"></rm-icon>Title</h2>
+        <input type="text"
+               class="form-control"
+               virtual-key-model
+               readonly
+               ng-model="booking.title">
+    </div>
+
+    <div class="panel contact-info">
+        <h2 rm-icon="user" text="Contact"></h2>
+        <input type="text"
+           class="form-control"
+           placeholder="Contact Name"
+           virtual-key-model
+           readonly
+           ng-model="selectedContact"
+           data-typeahead-on-select="hideKeyboard($item, $model, $label)"
+           typeahead="contact as contact.name for contact in getContacts($viewValue)">
+
+        <div class="summary">
+            <div class="name">{{name()}}</div>
+            <div class="email">{{email()}}</div>
+            <div class="number">{{number()}}</div>
+        </div>
+    </div>
+
+    <div class="panel time">
+        <h2><rm-icon icon="time" text="Time"></rm-icon></h2>
+        <div class="length">{{booking.getLengthText()}}</div>
+        <div class="time-data start">
+            <div class="text {{startClass}}">{{booking.startStr}}</div>
+            <div class="buttons" >
+                <a rm-icon="minus" rm-tap="adjustStartMinus()"></a>
+                <a rm-icon="plus"  rm-tap="adjustStartPlus()"></a>
+            </div>
+        </div>
+        <div class="time-data arrow" rm-icon="arrow-right"></div>
+        <div class="time-data end">
+            <div class="text {{endClass}}">{{booking.endStr}}</div>
+            <div class="buttons">
+                <a rm-icon="minus" rm-tap="adjustEndMinus()" data-repeatable="true"></a>
+                <a rm-icon="plus"  rm-tap="adjustEndPlus()"  data-repeatable="true"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="confirm">
+        <a ng-disabled="!confirmEnabled()" class="book btn btn-lg btn-primary" ng-click="confirm()">Confirm</a>
+        <div class="message">{{message}}</div>
+    </div>
+</div>
+
+<virtual-keyboard></virtual-keyboard>

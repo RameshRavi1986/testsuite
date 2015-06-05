@@ -1,0 +1,8 @@
+<smil>
+<head>
+<meta http-equiv="Refresh" content="10" />
+</head>
+<body systemComponent="http://www.w3.org/1999/xhtml">
+<ref src="http://roommate/smil/panel.wgt?cacheBuster" type="application/widget" />
+</body>
+</smil>

@@ -1,0 +1,15 @@
+.attendee-list {
+}
+
+.attendee-list .grid {
+  width: 400px;
+  height: 450px;
+  overflow-y: hidden;
+}
+.attendee-list .controls {
+    padding:10px 0 10px 10px;
+ }
+
+.attendee-list .controls > * {
+   padding-left:10px;
+}

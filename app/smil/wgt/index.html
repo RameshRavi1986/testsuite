@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1,user-scalable=no">
+    <title>RoomMate Loading Page</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body onload="">
+<div id="loading">
+    <h1 id="message">v1.4 Loading...</h1>
+    <pre id="url"></pre>
+</div>
+<script src="jquery.min.js"></script>
+
+<script>
+    $(function() {
+        var count = 0;
+        var url = "http://roommate/panel/auto/";
+
+        $('#url').text(url);
+
+        function tryRedirect() {
+
+            count++;
+
+            if(count > 1) {
+                $('#message').text("Error. Reconnecting " + count);
+            }
+
+            $.ajax({
+                url: url,
+                timeout: 10000, //10 secs
+                success: function() {
+                    console.log("go go go");
+                    //alert("ok");
+                    window.location.replace(url);
+                },
+                error: function() {
+                    console.log("error count =%d", count);
+                    window.setTimeout(tryRedirect, 1000);
+                }
+            });
+        }
+
+        window.setTimeout(tryRedirect, 1000);
+    });
+
+
+</script>
+
+</body>
+</html>

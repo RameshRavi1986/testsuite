@@ -1,0 +1,17 @@
+[
+  {
+  "id":"room_1",
+  "mailbox": "tom.makin@candeovision.co.uk",
+  "calendar": "Room 1"
+  },
+  {
+    "id":"room_2",
+    "mailbox": "tom.makin@candeovision.co.uk",
+    "calendar": "Room 2"
+  },
+  {
+    "id":"imr",
+    "mailbox": "imr@candeovision.co.uk",
+    "calendar": null
+  }
+]

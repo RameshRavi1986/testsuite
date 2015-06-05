@@ -1,0 +1,9 @@
+.brand-small {
+    display: block;
+    height:60px;
+    overflow:hidden;
+}
+
+.brand-small img {
+    vertical-align: middle;
+}

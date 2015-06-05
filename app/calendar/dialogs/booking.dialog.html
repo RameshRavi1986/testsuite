@@ -1,0 +1,172 @@
+<md-dialog aria-label="Edit Booking" class="dialog booking-dialog">
+    <md-toolbar class="md-accent dialog-header" layout="row" layout-align="space-between center">
+        <div class="dialog-title">{{::title}}</div>
+        <div layout layout-align="end center">
+
+            <ng-md-icon class="capacity-warning" ng-class="{'active':booking.getRoomCapacityWarning()}" class="icon"
+                        icon="warning" size="30">
+                <md-tooltip>Too many attendees for this room</md-tooltip>
+            </ng-md-icon>
+            <span>
+                <rm-capacity-icon capacity="booking.getRoomCapacity()"></rm-capacity-icon>
+               <md-tooltip>Room Capacity</md-tooltip>
+            </span>
+
+            <select id="room-select" ng-model="booking.roomId" ng-change="onChangeRoom()"
+                    ng-options="room.id as room.name for room in rooms"></select>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <div layout>
+            <div flex class="left">
+                <!-- Booking time -->
+                <div class="section" layout layout-align="start center">
+                    <div flex="60" layout>
+                        <rm-date-picker ng-model="date" ng-change="onChangeDate()" class="md-accent"></rm-date-picker>
+                    </div>
+
+                    <div layout="column" layout-align="center center">
+
+                        <div class="time" flex layout ng-class="{error: !valid}">
+                            <label class="select-label" for="start-input">Start</label>
+                            <input type="text" id="start-input" ng-change="onChangeTime()" ng-model="booking.start"
+                                   rm-time-input>
+                            <rm-time-picker ng-model="booking.start" ng-change="onChangeTime()" start="6" end="23"
+                                            step="30" validate="validateStartTime(time)"></rm-time-picker>
+                        </div>
+
+                        <div class="time" flex layout ng-class="{error: !valid}">
+                            <label class="select-label" for="end-input">End</label>
+                            <input id="end-input" ng-change="onChangeTime()" ng-model="booking.end" rm-time-input>
+                            <rm-time-picker ng-model="booking.end" ng-change="onChangeTime()" start="6" end="23"
+                                            step="30" validate="validateEndTime(time)"></rm-time-picker>
+                        </div>
+                    </div>
+                </div>
+                <!-- <md-divider></md-divider>-->
+
+                <!-- Title & Organiser -->
+                <div class="section" layout>
+                    <md-input-container flex>
+                        <label for="title-input">Title</label>
+                        <input id="title-input" ng-change="onChange()" ng-model="booking.title" type="text">
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label for="organiser-input">Organiser</label>
+                        <input id="organiser-input" ng-change="onChange()" ng-model="booking.organizer.name"
+                               type="text">
+                    </md-input-container>
+                </div>
+
+                <!-- Category and Ready Checkbox -->
+                <div class="section" layout layout-align="space-between center">
+
+                    <div layout layout-align="start center">
+                        <label class="select-label" for="category-select">Category</label>
+                        <select id="category-select" ng-change="onChange()" ng-model="booking.categoryId"
+                                ng-options="category.id as category.name for category in categories" flex>
+                            <option value="">None</option>
+                        </select>
+
+                        <div style="background-color: {{getCategoryColor()}}" class="color-preview"></div>
+                    </div>
+                    <div layout="column">
+
+                        <md-checkbox aria-label="Checkbox Ready" ng-change="onChangePrepared()"
+                                     ng-model="booking.prepared" class="md-primary" flex="20">
+                            Prepared?
+                        </md-checkbox>
+                        <div class="prepared-by"><span ng-show="booking.prepared">by {{booking.preparedBy}} </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <md-divider></md-divider>
+
+                <!-- Custom Logo -->
+                <div class="section" layout>
+
+                    <div layout="column">
+                        <md-input-container flex>
+                            <label for="logo-text-input">Text</label>
+                            <input id="logo-text-input" ng-change="onChange()" ng-model="booking.logoText" type="text">
+                        </md-input-container>
+
+                        <div>
+                            <label for="logo-select">Image</label>
+                            <select id="logo-select" ng-change="onChangeLogoImage()" ng-model="booking.logoId"
+                                    ng-options="logo.id as logo.name for logo in logos">
+                                <option value="">None</option>
+                            </select>
+
+                        </div>
+
+                        <div>
+                            <md-checkbox ng-change="onChange()" aria-label="Checkbox Embedded Logo"
+                                         ng-model="booking.embeddedLogo" class="md-primary" flex="20">
+                                Embedded
+                            </md-checkbox>
+                            <md-checkbox ng-change="onChange()" aria-label="Checkbox Fullscreen Logo"
+                                         ng-model="booking.fullscreenLogo" class="md-primary" flex="20">
+                                Fullscreen
+                            </md-checkbox>
+                        </div>
+                    </div>
+
+                    <div flex layout="column">
+                        <div class="logo-preview-header">Panel Logo</div>
+                        <div class="logo-preview" flex layout layout-align="center center">
+                            <span ng-if="booking.logoId">
+                                <img ng-src="{{booking.getLogoSrc()}}"/>
+                            </span>
+
+                            <span class="logo-preview-text" ng-if="!booking.logoId">{{booking.logoText}}</span>
+                        </div>
+                    </div>
+                </div>
+                <md-divider></md-divider>
+
+                <div class="section" layout>
+                    <md-input-container flex>
+                        <label for="resources-text">Resources</label>
+                        <textarea id="resources-text" ng-change="onChange()" ng-model="booking.resources" rows=5
+                                  ng-list="&#10;" ng-trim="false"> </textarea>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                        <label for="notes-text">Notes</label>
+                        <textarea id="notes-text" ng-change="onChange()" ng-model="booking.notes" rows=5> </textarea>
+                    </md-input-container>
+                </div>
+
+                <div class="section" layout="column" ng-if="!isNew">
+                    <div class="date-stamp">Created {{::booking.created | rmDateStamp}}</div>
+                    <div class="date-stamp">Last updated {{::booking.updated | rmDateStamp}}</div>
+                </div>
+            </div>
+            <div class="right" layout="column" layout-align="start end">
+                <md-input-container>
+                    <label>Total Attendees</label>
+                    <input class="total-attendees" type="number" ng-change="onChangeAttendees()"
+                           ng-model="booking.totalAttendees"> </textarea>
+                </md-input-container>
+
+                <attendee-list flex booking="booking" on-change="onChangeAttendees()"></attendee-list>
+            </div>
+        </div>
+    </md-content>
+    <div class="md-actions" layout="row">
+        <md-button class="md-warn" ng-click="deleteBooking()" ng-show="::booking.id">
+            Delete
+        </md-button>
+        <span flex></span>
+        <md-button ng-click="confirm()">
+            Confirm
+        </md-button>
+        <md-button ng-click="cancel()" class="md-primary">
+            Cancel
+        </md-button>
+    </div>
+</md-dialog>

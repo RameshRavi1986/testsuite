@@ -1,0 +1,46 @@
+/* Room Mate Theme : Nu */
+
+.nu .header .room-name {
+    left:200px;
+    right:200px;
+    top: 2px;
+    text-align: center;
+    color: #02506f;
+    font-size: 40px;
+}
+
+.nu .header .client-logo {
+  top:-10px;
+}
+
+.nu .header .clock {
+    top:3px;
+}
+
+.nu .header .time {
+    color: #027e9e;
+    font-size: 30px;
+}
+
+.nu .header .date {
+    font-size: 11px;
+    color: #024564;
+}
+
+.nu .content {
+    background: rgb(0, 43, 73);
+    /*background: -webkit-linear-gradient(left, rgb(0, 43, 73) 10%, rgb(0, 100, 133) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.nu .vacant {
+    color: #fff;
+}
+
+.nu .tap-active  {
+    background-color: inherit;
+    color: #fff;
+}
+
+.nu .tap-active .glyphicon {
+    color:white;
+}

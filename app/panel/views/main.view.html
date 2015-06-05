@@ -1,0 +1,23 @@
+
+<div class="header">
+
+    <rm-brand-img></rm-brand-img>
+    
+    <div class="room-name">{{main.data.roomName}}</div>
+
+    <div class="clock">
+        <div class="time">{{main.data.timeStr}}</div>
+        <div class="date">{{main.data.dateStr}}</div>
+    </div>
+</div>
+
+<div class="view" ui-view></div>
+
+<div class="footer" ng-cloak>
+    <div class="menu">
+        <span rm-menu-item="Home"   state="main.home"    data-icon="home"></span>
+        <span rm-menu-item="Today"  state="main.today"   data-icon="list"></span>
+        <span rm-menu-item="Search" state="main.search"  data-icon="search"></span>
+    </div>
+    <div class="rm-logo"></div>
+</div>

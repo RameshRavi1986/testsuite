@@ -1,0 +1,9 @@
+{
+  "useDefaultCredentials":"true",
+  "user":"tom.makin@candeovision.co.uk",
+  "mailbox": "tom.makin@candeovision.co.uk",
+  "paths": {
+    "license": "",
+    "panels": "panels.json"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+  "id":"panel_1",
+  "roomId": "room_1",
+  "ip":"192.168.1.101"
+  },
+  {
+   "id":"panel_2",
+   "roomId": "room_2",
+   "ip":"192.168.1.102"
+  },
+  {
+    "id":"panel_3",
+    "roomId": "imr",
+    "ip":"192.168.1.103"
+  },
+  {
+    "id":"panel_3",
+    "roomId": "imr",
+    "virtual":"true"
+  }
+]

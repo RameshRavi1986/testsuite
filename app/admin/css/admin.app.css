@@ -1,0 +1,282 @@
+body {
+  margin:0;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+
+  background: #fff;
+  position:relative;
+  min-width: 500px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  overflow: hidden;
+}
+
+.btn {
+  margin-right:5px;
+}
+
+.loading {
+  margin:20px;
+}
+
+.inline {
+  display:inline;
+}
+
+.content {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  font-size: 24px;
+  padding: 15px;
+  margin:0;
+
+
+  /*background: -webkit-linear-gradient(top, #141428 1%, #42465a 100%); */
+}
+
+/*Footer */
+.footer {
+  position: absolute;
+
+  text-align: center;
+  bottom: 0;
+  left:0;
+  right:0;
+  z-index: 999;
+  height: 60px;
+
+  border-top: solid 2px grey;
+}
+
+.footer .rm-logo {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+
+}
+
+.footer .controls {
+  position: absolute;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  top:0;
+  font-size: 12px;
+  overflow:hidden;
+}
+
+
+.footer .controls .slider {
+  width: 300px;
+  font-size: 12px;
+  margin: 10px;
+  padding:10px;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.footer .controls .slider .label {
+  min-width:30px;
+  margin-right: 5px;
+}
+
+.footer .time {
+  font-size: 30px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+
+[ng-cloak]
+{
+  display: none !important;
+}
+
+
+/* Header */
+.header {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:80px;
+  font-size: 16px;
+
+  background: #FFF;
+
+  border-bottom: solid 2px grey;
+  z-index: 2;
+}
+
+.header .client-logo {
+  position: absolute;
+  top: 6px;
+  left:20px;
+}
+
+.header .login {
+  text-align: right;
+}
+
+/* Main View */
+
+
+a {
+  cursor: pointer;
+}
+
+.overview-top {
+  position: absolute;
+  top:20px;
+  left:80px;
+  right:0;
+  height:40px;
+  overflow:hidden;
+}
+
+.overview-left {
+  position: absolute;
+  top:60px;
+  left:0px;
+  width:80px;
+  bottom:0;
+  overflow: hidden;
+}
+
+.overview-main {
+  position: absolute;
+  top:60px;
+  left:80px;
+  right:0;
+  bottom:0;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+.main .title {
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 20px;
+  min-width: 20px;
+}
+
+.nowrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 30px;
+}
+
+
+.cal-flex {
+ position:relative;
+}
+
+.cal-day {
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom: 0;
+  border-right: 1px solid #ccc;
+}
+
+.cal-day-header {
+  width: 80px;
+  border-right: 1px solid #ccc;
+  height: 1000px;
+}
+
+.cal-container-background {
+  height:100%;
+}
+
+.cal-container {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+
+  cursor: crosshair;
+}
+
+.popup {
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  position: absolute;
+  top:-32px;
+  height: 27px;
+  padding:5px;
+
+  background-color:rgba(255,255,255,1.0);
+
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+  display:none;
+}
+
+
+.cal-background-header {
+  height:100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.cal-background-A {
+  height:100%;
+  width:100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+}
+
+.cal-background-B {
+  height:100%;
+  width:100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.dialog .dialog-header  {
+  padding: 0 16px 0 16px;
+}
+
+
+
+/*form elements */
+select {
+  background: white;
+
+  padding: 5px; /* If you add too much padding here, the options won't show in IE */
+}
+
+
+/*misc */
+.resize-bar {
+  position:relative;
+  z-index: 50;
+  display:block;
+  width: 100%;
+  height: 5px;
+  cursor: row-resize;
+}
+
+.resize-bar.active {
+  background-color: #00b3ff;
+}
+
+md-backdrop.md-opaque.md-default-theme {
+  background-color: rgba(0,0,0,0.5);
+}

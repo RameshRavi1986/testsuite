@@ -1,0 +1,23 @@
+<div class="poster-view">
+
+    <div class="header">
+        <rm-brand-img></rm-brand-img>
+
+        <div class="room-name">{{view.header.roomName}}</div>
+
+        <div class="clock">
+            <div class="time">{{view.header.timeStr}}</div>
+            <div class="date">{{view.header.dateStr}}</div>
+        </div>
+    </div>
+
+    <div class="logo-wrap">
+        <img class="logo" ng-src="{{view.logoSrc}}" ng-show="view.logoSrc"/>
+        <div class="logo-text" ng-show="!view.logoSrc">{{view.logoText}}</div>
+    </div>
+
+    <div rm-dynamic-booking="view.currentBooking" data-now="true"></div>
+
+    <div class="overlay" rm-tap="view.exit()"></div>
+</div>
+

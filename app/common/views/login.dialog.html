@@ -1,0 +1,28 @@
+<md-dialog aria-label="Login" class="dialog login-dialog">
+    <md-toolbar class="md-accent dialog-header" layout="row" layout-align="space-between center">
+        <div class="dialog-title">Login</div>
+    </md-toolbar>
+    <md-content>
+        <md-input-container>
+            <label>User</label>
+            <input ng-model="user" name="userName" id="loginUserName" ng-keyup="onKeyUp($event)">
+        </md-input-container>
+        <md-input-container>
+            <label>Password</label>
+            <input ng-model="password" type="password" name="password" id="loginPassword" ng-keyup="onKeyUp($event)">
+        </md-input-container>
+
+        <md-checkbox aria-label="Remember me" ng-model="rememberMe" class="md-primary">
+            Remember Me
+        </md-checkbox>
+
+        <div ng-show="alert" class="error">
+            {{alert}}
+        </div>
+    </md-content>
+    <div class="md-actions" layout="row">
+        <md-button ng-click="confirm()">
+            Login
+        </md-button>
+    </div>
+</md-dialog>

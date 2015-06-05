@@ -1,0 +1,13 @@
+<div>
+    <div class="info">
+        Booking alerts for {{info.date}}<br>
+        Start times from {{info.from}} to {{info.to}}
+    </div>
+
+    <div ng-repeat="booking in alerts">
+        <cal-alert></cal-alert>
+    </div>
+    <div class="no-data" ng-hide="alerts.length > 0">
+        No alerts to display...
+    </div>
+</div>

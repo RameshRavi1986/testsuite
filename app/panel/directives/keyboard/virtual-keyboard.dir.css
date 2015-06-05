@@ -1,0 +1,115 @@
+
+/* keyboard */
+.virtual-keyboard {
+    position: fixed;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    height:300px;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+}
+
+.virtual-keyboard .layout
+{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.virtual-keyboard .button {
+    width:60px; height:60px;
+    position:relative;
+    display: block;
+    float:left;
+    margin-right:10px;
+    margin-top:1px;
+    cursor:pointer;
+    font-size:1.9em;
+
+    /*box shadow*/
+    -webkit-box-shadow: 0px 1px 3px #000000;-moz-box-shadow: 0px 1px 3px #000000;box-shadow: 0px 1px 3px #000000;
+    /*box radius*/
+    -moz-border-radius: 5px;border-radius: 5px;
+    /*gradient*/
+    background: #ffffff; /* old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* ie */
+}
+
+.virtual-keyboard .key-row
+{
+    width:850px;
+    overflow: hidden;
+    display:inline-block
+}
+
+/* offset evey second row */
+.virtual-keyboard .key-row:nth-child(2)
+{
+    margin-left:30px;
+}
+
+.virtual-keyboard .button.text
+{font-size:1.3em;}
+
+.virtual-keyboard .button.right-key,
+.virtual-keyboard .button.del-key
+{width:90px;}
+
+.virtual-keyboard .button.enter-key
+{width:130px;}
+
+.virtual-keyboard .button.numeric-key
+{width:130px;}
+
+.virtual-keyboard .button.close-key
+{width:160px;}
+
+.virtual-keyboard .button.space-key
+{width:480px;}
+
+.virtual-keyboard .button.blank-key
+{  opacity: 0;  }
+
+.virtual-keyboard .buttonDown {
+    background:none;
+    background-color: #c9cdd5;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.virtual-keyboard .button_a {margin-left:26px;}
+.virtual-keyboard .button_dash {margin-left:26px;}
+.virtual-keyboard .button_underscore {margin-left:26px;}
+.virtual-keyboard .button_enter {width:103px; font-size:1.3em; }
+.virtual-keyboard .button_del{width:103px; font-size:1.3em;}
+.virtual-keyboard .button_smallletter{font-size:1.3em;}
+.virtual-keyboard .button_capitalletterleft{font-size:1.3em;}
+.virtual-keyboard .button_capitalletterright{ width:129px; font-size:1.3em;}
+.virtual-keyboard .button_numberleft{width:172px; font-size:1.3em; margin-left:26px;}
+.virtual-keyboard .button_numberright{width:129px; font-size:1.3em;}
+.virtual-keyboard .button_space {width:376px;}
+.virtual-keyboard .button_symbolsleft{width:172px; font-size:1.3em; margin-left:26px;}
+.virtual-keyboard .button_symbolsright{width:129px; font-size:1.3em;}
+
+
+.virtual-keyboard .key {
+    font-size: 24px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    padding-top:12px;
+    text-shadow: 0px 1px 1px #ffffff;
+    filter: dropshadow(color=#ffffff, offx=0, offy=1);
+    color: #999;
+}
+.virtual-keyboard .key_del {padding-top:18px;}
+.virtual-keyboard .key_enter {padding-top:18px;}
+.virtual-keyboard .key_smallletter {padding-top:18px;}
+.virtual-keyboard .key_capitalletterleft {padding-top:18px;}
+.virtual-keyboard .key_capitalletterright {padding-top:18px;}
+.virtual-keyboard .key_number {padding-top:18px;}
+.virtual-keyboard .key_symbols {padding-top:18px;}

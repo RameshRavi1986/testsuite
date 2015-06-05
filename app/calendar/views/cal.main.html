@@ -1,0 +1,62 @@
+<!-- Header  -->
+<div class="header" layout="row" layout-align="space-between center">
+
+    <!--Brand Image -->
+    <div class="brand">
+        <rm-brand-img/>
+    </div>
+
+    <!-- Date Picker  -->
+    <div class="date">
+        <rm-date-picker ng-model="display.date" ng-change="onDateChange()"/>
+    </div>
+
+    <!-- Login Widget  -->
+    <rm-login></rm-login>
+</div>
+
+<!-- Content  -->
+<div class="view" layout="row">
+    <div flex class="main" ui-view></div>
+    <div flex class="side" ng-if="display.alerts">
+        <cal-alert-list></cal-alert-list>
+    </div>
+    <div flex class="side" ng-if="display.visitors">
+        <rm-visitor-report></rm-visitor-report>
+    </div>
+</div>
+
+
+<!-- Footer  -->
+<div class="footer" ng-cloak layout="row">
+    <div class="rm-logo"></div>
+
+
+    <div class="controls" layout="row" layout-align="center center">
+        <div flex class="slider">
+            <div layout>
+                <div flex="20" layout layout-align="end center" class="label"><span flex>Width</span></div>
+                <md-slider class="md-primary" flex min="100" max="300" ng-change="display.save()" ng-model="display.width" aria-label="width"/>
+            </div>
+        </div>
+
+        <div flex class="slider" layout>
+                <div flex="20" layout layout-align="end center" class="label"><span flex>Height</span></div>
+                <md-slider class="md-primary" flex min="30" max="150" ng-change="display.save()" ng-model="display.height" aria-label="height"/>
+        </div>
+
+        <div flex class="slider">
+            <md-switch class="md-primary"  ng-model="display.alerts" ng-change="display.save()" aria-label="Toggle Alerts">
+                Alerts
+            </md-switch>
+        </div>
+
+        <div flex class="slider">
+            <md-switch class="md-primary"  ng-model="display.visitors" ng-change="display.save()" aria-label="Toggle Visitor Info">
+                Visitors
+            </md-switch>
+        </div>
+
+        <div flex class="time">{{getTime()}}</div>
+    </div>
+</div>

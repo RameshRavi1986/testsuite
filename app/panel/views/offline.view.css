@@ -1,0 +1,44 @@
+.offline-view {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+}
+
+.offline-view .header {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.offline-view .logo-wrap {
+    position: absolute;
+    text-align: center;
+    top:150px;
+    bottom:150px;
+    left:0;
+    right:0;
+
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    display: box;
+    box-align: center;
+    box-pack: center;
+}
+
+.offline-view .brand-large {
+    display: inline-block;
+    padding:20px;
+}
+
+.offline-view .text {
+    position: absolute;
+    bottom: 10px;
+    left:0;
+    right:0;
+    color: black;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+<!-- Note the use of one time binding syntax {::expr} to keep the number of watchers down -->
+
+<div class="cal-booking" ng-class="::getClass()" rm-draggable drag="booking" drag-enabled="!dirty">
+    <span class="resize-bar top" rm-resizer on-drag="updateTop(delta)" on-drag-start="dragStart()" on-drag-end="dragEnd()"></span>
+    <span class="click-area" rm-cal-edit-btn></span>
+    <span class="resize-bar bottom" rm-resizer on-drag="updateBottom(delta)" on-drag-start="dragStart()" on-drag-end="dragEnd()"></span>
+
+    <div class="category" ng-style="::getCategoryStyle()">
+        <div class="popup">{{::getCategoryName()}}</div>
+    </div>
+
+    <div class="summary default">
+         <div class="title">{{::booking.title}}</div>
+         <div class="organizer">{{::booking.getOrganizerName()}}</div>
+         <div class="time">{{::booking.startStr}} - {{::booking.endStr}}</div>
+
+        <rm-booking-icons booking="::booking"></rm-booking-icons>
+       <!--
+        <rm-capacity-icon-small capacity="booking.attendees.total"></rm-capacity-icon-small> -->
+    </div>
+
+    <div class="summary popup">
+        <div class="title">{{::booking.title}}</div>
+        <div class="organizer">{{::booking.getOrganizerName()}}</div>
+        <div class="time">{{::booking.startStr}} - {{::booking.endStr}}</div>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,34 @@
+.booking-icons {
+    fill: #999;
+}
+
+.booking-icons .attendees-icon {
+    padding:1px;
+    height: 20px;
+    color: #999;
+}
+
+
+.booking-icons .attendees-icon .icon {
+    margin-bottom:-2px;
+}
+
+
+.booking-icons .attendees-icon .text {
+    font-weight: bold;
+    font-size: 11px;
+    min-width: 10px;
+}
+
+
+.booking-icons .icon-none {
+    display:none;
+}
+
+.booking-icons .icon-red {
+    fill: #c40000;
+}
+
+.booking-icons .icon-green {
+    fill: #20a033;
+}

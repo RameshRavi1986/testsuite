@@ -1,0 +1,61 @@
+.booking-list {
+    position: absolute;
+    left: 55px;
+    right: 0px;
+    top:0;
+    bottom:0;
+}
+
+.booking-list .item {
+    display:block;
+}
+
+.booking-list .booking
+{
+    position: relative;
+    height: 60px;
+}
+
+.booking-list .booking > *
+{
+    margin-top: 0px;
+    position: absolute;
+    top: 0;
+}
+
+.booking-list .booking .time {
+    left: 40px;
+}
+
+.booking-list .booking .title {
+    left: 210px;
+}
+
+.booking-list .booking .book {
+    margin-right: 10px;
+}
+
+.booking-list .booking .info {
+    left: 210px;
+    top: 33px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+.booking-list .controls {
+    position: absolute;
+    top:150px;
+    width: 300px;
+    right:100px;
+    height: 100px;
+    z-index: 99;
+}
+
+.booking-list .controls .glyphicon {
+    font-size: 70px;
+}
+
+.booking-list .controls .btn[disabled] {
+    opacity: 0.1;
+}

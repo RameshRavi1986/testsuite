@@ -1,0 +1,16 @@
+<!-- normal binding syntax used here -->
+
+<div ng-show="booking" class="booking">
+
+    <h3 class="title">{{booking.title}} <rm-book-btn ng-show="bookBtnVisible()"></rm-book-btn></h3>
+
+    <p class="organizer">{{booking.organizer.name}}</p>
+
+    <p class="time" ng-hide="(!booking.busy && now)">
+        {{booking.startStr}} - {{booking.endStr}}
+    </p>
+</div>
+
+<div ng-hide="booking">
+    <p>None</p>
+</div>

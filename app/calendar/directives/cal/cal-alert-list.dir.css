@@ -1,0 +1,13 @@
+cal-alert-list .info {
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: #666;
+}
+
+cal-alert-list .no-data {
+    font-size: 20px;
+    padding-left: 10px;
+}
+

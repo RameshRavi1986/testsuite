@@ -1,0 +1,165 @@
+
+.visuallyhidden {
+    visibility: hidden;
+}
+
+.time-date {
+    overflow: visible;
+    position: relative;
+    height: 40px;
+    border: none;
+    width: 368px;
+    flex-basis: 368px;
+    font-size: 20px;
+    z-index: 99;
+}
+
+.time-date > .display {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    cursor: pointer;
+    transition: color 0.6s ease-in-out;
+}
+
+.time-date > .display > .title {
+    color: #e1e1e1;
+    line-height: 40px;
+    min-height: initial;
+}
+
+.time-date > .control {
+
+    visibility: visible;
+    background: white;
+    box-shadow: 1px 1px 20px #888888;
+
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: auto;
+}
+
+.time-date > .control.active {
+    visibility: visible;
+}
+
+.time-date > .control > .date-control {
+    float: left;
+    height: auto;
+    overflow: hidden;
+}
+
+.time-date > .control > .date-control > .title {
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.time-date > .control > .date-control > .title:after,
+.time-date > .control > .date-control > .title:before {
+    display: table;
+    content: " ";
+}
+
+.time-date > .control > .date-control > .title:after {
+    clear: both;
+}
+
+.time-date > .control > .date-control > .title > span.month-part {
+    cursor: pointer;
+    position: relative;
+    margin-right: 8px;
+}
+
+.time-date > .control > .date-control > .title > span.month-part:hover {
+    text-decoration: underline;
+}
+
+.time-date > .control > .date-control > .title > span.month-part > select {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0;
+    width: 100%;
+}
+
+.time-date > .control > .date-control > .title > input {
+    border: none;
+    width: 69px;
+}
+
+.time-date > .control > .date-control > .headers {
+    clear: both;
+    margin-top: -10px;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 37px;
+    color: #737373;
+    text-align: left;
+}
+
+.time-date > .control > .date-control > .headers > .day-cell {
+    text-align: center;
+    cursor: default;
+    padding: 10px 6px 6px 6px;
+}
+
+.time-date > .control > .date-control .day-cell {
+    float: left;
+    width: 42px; /* 368/7 - 2*37 */
+    height: 42px;
+    cursor: pointer;
+    border-radius: 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: normal !important;
+    font-size: 16px;
+}
+
+.time-date > .control > .date-control > .days {
+    font-size: 1rem;
+    padding-left: 37px;
+
+}
+
+.time-date > .control > .date-control > .days .day-cell.selected {
+    color: #fff;
+}
+
+.time-date.date-mode > .control > .slider {
+    left: 0%;
+}
+
+.time-date:not(.date-mode-add):not(.date-mode-remove).date-mode > .control > .time-control > * {
+    display: none;
+}
+
+.time-date.date-only > .control > .date-control {
+    padding-left: 16px;
+}
+
+.time-date > .display,
+.time-date > .control {
+    float: left;
+    text-align: center;
+}
+
+.time-date .buttons {
+    clear: both;
+    padding: 10px;
+    text-align: right;
+}
+
+.time-date .md-button {
+    min-width: 0;
+    margin: 0;
+    padding: 6px;
+}
+
